@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+nav {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  background: #fff;
+  z-index: 1;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5em;
+}
+
+nav .logo small {
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+.navbar>ul {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  position: relative;
+  list-style: none;
+  margin: 0 5px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.navbar ul li>a {
+  margin-right: 1px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active,
+.navbar .dd_menu ul li a:hover,
+.navbar .dd_menu ul li a.active {
+  background: rgb(221, 89, 89);
+  color: #fff;
+}
+
+.navbar .dd_menu ul li a:hover {
+  background-color: rgba(250, 0, 0, 0.4);
+}
+
+.navbar .dd_menu {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  display: none;
+}
+
+.navbar .dd_menu.active {
+  display: block;
+}
+
+.navbar .dd_menu ul li a {
+  background: rgb(236, 96, 96);
+  color: #fff;
+}
+
+.navbar .dd_menu::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border: 15px solid;
+  border-color: transparent transparent rgb(236, 96, 96) transparent;
+}
+
+.jumbotron {
+  position: relative;
+  height: 100vh;
+  background-image: url(../image/banner1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textBx {
+  text-align: center;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.textBx h1 {
+  font-size: 3em;
+}
+
+.textBx p {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.textBx h1,
+.textBx p {
+  line-height: 40px;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.sos-media {
+  margin-top: 10px;
+}
+
+.sos-media a {
+  font-size: 38px;
+  margin: 10px;
+  transition: ease-in 0.1s;
+}
+
+.sos-media a .fa-whatsapp {
+  color: rgb(30, 255, 0);
+}
+
+.sos-media a .fa-github {
+  color: rgb(0, 0, 0);
+}
+
+.sos-media img {
+  width: 38px;
+  margin-bottom: -5px;
+}
+
+.sos-media a:hover {
+  border-bottom: 3px solid rgb(164, 229, 255);
+}
+
+.card {
+  box-shadow: 0 5px 15px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+/* mainnn =============== */
+
+
+main {
+  padding: 30px;
+  overflow: auto;
+}
+
+.up {
+  padding-top: 100px;
+}
+
+.content {
+  width: 75%;
+  float: left;
+}
+
+.content article h2 {
+  margin-bottom: 15px;
+}
+
+.content h2::after {
+  display: block;
+  content: '';
+  height: 4px;
+  background: rgb(221, 89, 89);
+  margin-top: 5px;
+  width: 12%;
+}
+
+.content p {
+  text-indent: 3em;
+  line-height: 28px;
+}
+
+#osis,
+#paskibra,
+#silat,
+#menwa {
+  padding-top: 100px;
+}
+
+#osis h3,
+#paskibra h3,
+#silat h3,
+#menwa h3 {
+  background: #000;
+  color: #fff;
+  font-size: 2.5em;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.gambar {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+
+
+
+
+
+/* profile kiri ======== */
+
+aside {
+  width: 25%;
+  padding: 70px 0;
+  padding-left: 20px;
+  text-align: center;
+  float: right;
+}
+
+aside figure img {
+  width: 150px;
+}
+
+aside section {
+  margin-top: 15px;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: rgb(207, 83, 83);
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+  .content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .gambar {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #osis h3,
+  #paskibra h3,
+  #silat h3,
+  #menwa h3 {
+    background: none;
+    color: #000;
+    font-size: 2.5em;
+    text-align: left;
+  }
+}
+
+@media (max-width: 550px) {
+  nav {
+    padding: 12px 5px;
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    margin: 0;
+  }
+
+  .navbar ul li a {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .textBx h1 {
+    font-size: 39px;
+  }
+
+  .textBx p {
+    font-size: 19px;
+    line-height: 23px;
+  }
+
+  .sos-media a {
+    font-size: 32px;
+  }
+
+  .sos-media img {
+    width: 32px;
+  }
+
+  .content p {
+    text-align: justify;
+  }
+
+  .gambar {
+    width: 100%;
+    height: 150px;
+  }
+
+  #osis h3,
+  #paskibra h3,
+  #silat h3,
+  #menwa h3 {
+    font-size: 28px;
+  }
+}
